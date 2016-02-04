@@ -28,8 +28,8 @@ JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Compile failed with exceptio
 end
 
 # ---------------------------------------------------------------------------- #
-# JDKの展開                                                                    #
+# openfireの展開                                                                    #
 # ---------------------------------------------------------------------------- #
-#value = `dpkg -i /tmp/buildpacks/java-jdk-buildpack/download/jdk1.8.0-71_1.8.071-1_amd64.deb`
+value = `dpkg -i /app/openfire_3.8.2-2_amd64.deb`
 
 
