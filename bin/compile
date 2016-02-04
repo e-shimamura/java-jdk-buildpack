@@ -28,13 +28,9 @@ JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Compile failed with exceptio
 end
 
 # ---------------------------------------------------------------------------- #
-# 変数を設定                                                                   #
+# JDKの展開                                                                    #
 # ---------------------------------------------------------------------------- #
-BIN_DIR=$(dirname $0)
-BUILDPACK_DIR=`cd $(dirname $0); cd ..; pwd`
-BUILD_DIR=$1
-CACHE_DIR=$2
-
-compile_jdk="$BUILDPACK_DIR/download/jdk1.8.0-71_1.8.071-1_amd64.deb"
+value = `dpkg -i /tmp/buildpacks/java-jdk-buildpack/download/jdk1.8.0-71_1.8.071-1_amd64.deb`
+compile_jdk="/tmp/buildpacks/java-jdk-buildpack/download/jdk1.8.0-71_1.8.071-1_amd64.deb"
 dpkg -i $compile_jdk
 
